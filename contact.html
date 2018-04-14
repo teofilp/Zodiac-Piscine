@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+  <link rel="stylesheet" type="text/css" href="styles/contact.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <a style="text-decoration: none;" href="index.php" class="back-button"><i class="ion-chevron-left"></i> Acasa</a>
+    <div class="centered-div">
+      <div class="leftside-div">
+        <h2>Contacteaza-ne !</h2>
+        <form action="" method="post">
+          <div class="input-div firstname-input-div" >
+            <label for="firstname">
+              Prenume
+            </label>
+            <input type="text" name="firstname" required="true" id="firstName">
+          </div>
+        <div class="input-div firstname-input-div" >
+            <label for="firstname">
+              Nume
+            </label>
+            <input type="text" name="firstname" required="true" id="lastName">
+          </div>
+
+          <div class="input-div">
+            <label for="phone">
+              Telefon
+            </label>
+            <input type="text" name="phone" required="true" id="phone">
+          </div>
+
+          <div class="input-div">
+            <label for="email">
+              Email
+            </label>
+            <input type="email" name="email" required="true" id="email">
+          </div>
+
+          <div class="input-div textarea-div">
+            <label for="message">Mesaj</label>
+              <textarea name="message" id="message">
+                                    
+              </textarea>
+          </div>
+          <input type="submit" value="Trimite mesaj" name="submit" class="send-message-button">    
+        </form>
+      </div>
+      <div class="rightside-div">
+        <h2>Viziteaza-ne !</h2>
+        <div class="location-div">
+          <h4 class="map-label">Cluj</h4>
+          <div id="map-cj"></div>
+          <div class="info-div cluj-info">
+            <h4 class="cluj-info-address">Adresa: bulevardul Constantin Brâncuși, nr.175-177</h4>
+            <h4 class="cluj-info-postal-code">Cod postal: 400458</h4>
+            <h4 class="cluj-info-phone">Telefon: +40 740 052 223</h4>
+            <h4 class="email">E-mail: office@zodiac-piscine.ro</h4>
+          </div>
+          <h4 class="map-label">Zalau</h4>
+          <div id="map-sj"></div>
+          <div class="info-div zalau-info">
+            <h4 class="cluj-info-address">Adresa: strada Corneliu Coposu, nr. 75B</h4>
+            <h4 class="cluj-info-postal-code">Cod postal: 450008</h4>
+            <h4 class="cluj-info-phone">Telefon: + +40 723 581 534</h4>
+            <h4 class="email">E-mail: office@zodiac-piscine.ro</h4>
+          </div>
+
+          
+
+          
+        </div>
+        <div class="media-links-div">
+          <ul class="white-links-container">
+            <li><a href="#"><div class="fb-logo"><i class="ion-social-facebook fb-i"></i></div></a></li>
+
+            <li><a href="#"><div class="tw-logo"><i class="ion-social-twitter tw-i"></i></div></a></li>
+
+            <li><a href="#"><div class="gp-logo"><i class="ion-social-googleplus gp-i"></i></div></a></li>
+
+            <li><a href="#"><div class="pi-logo"><i class="ion-social-pinterest pi-i"></i></div></a></li>
+
+            <li><a href="#"><div class="ln-logo"><i class="ion-social-linkedin ln-i"></i></div></a></li>
+
+          </ul>
+        </div>
+        
+
+        
+      </div>
+
+
+    </div>
+  
+
+
+	<!-- <div id="map-cj"></div>
+	<div id="map-sj"></div> -->
+    	
+
+
+
+    <script>
+	  	var map_cj, map_sj;
+      function initMap(){
+      	var myLatLng = {lat:46.7568134, lng: 23.6195512};
+      	var myLatLng2 = {lat:47.175567, lng: 23.068799};
+
+      	var map_1 = {
+      		zoom:17,
+      		center:myLatLng,
+      		mapTypeId: google.maps.MapTypeId.STREETMAP
+      	}
+      	var map_2 = {
+      		zoom:17,
+      		center: myLatLng2
+      	}
+      	map_cj = new google.maps.Map(document.getElementById('map-cj'), map_1);
+      	map_sj = new google.maps.Map(document.getElementById('map-sj'), map_2);
+
+
+      	var marker_cj = new google.maps.Marker({
+      		position: myLatLng,
+      		map: map_cj,
+      		title: 'Zodiac Piscine'
+      	});
+      	var marker_sj = new google.maps.Marker({
+      		position: myLatLng2,
+      		map: map_sj,
+      		title: 'Zodiac Piscine'
+      	});
+
+      }
+
+
+          </script>
+    <script 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGGys-ed8VkVOY-7rFpLv9DdDEJlApTs0&callback=initMap">
+    </script>
+ 
+</body>
+</html>

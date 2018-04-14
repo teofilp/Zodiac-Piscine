@@ -1,0 +1,569 @@
+* {
+	box-sizing: border-box;
+}
+
+.clearfix {
+	content: "";
+	width: 1px;
+	height: 1px;
+	clear: both;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+
+::-webkit-input-placeholder { 
+  	color: grey;
+  	font-style: italic;
+}
+
+a {
+	text-decoration: none;
+}
+
+.fixed-top {
+	position: fixed;
+	top: 0;
+	background-color: white;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .3);
+	z-index: 1;
+}
+
+
+/*********************************
+		NAVIGATION SECTION
+**********************************/
+
+button i {
+	margin-right: 5px;
+}
+
+
+nav {
+	width: 100%;
+	height: 50px;
+	background-color: #2b2b2b;
+	position: relative;
+}
+
+nav h3 {
+	margin: 0;
+	display: inline-block;
+	/*position: absolute;
+	top: 50%;
+	transform: translateY(-50%);*/
+	float: left;
+	color: lightgray;
+	padding-top: 11.5px;
+	padding-left: 80px;
+	margin-right: 50px;
+}
+
+nav h3 span {
+	color: #2e6da4; 
+}
+
+#navList {
+	width: 15%;
+	float: left;
+	list-style-type: none;
+	padding: 0;
+	/*margin-left: 350px;*/
+	height: 100%;
+}
+
+#navList li{
+	width: 45%;
+	margin: 0, 2.5%, 0, 2.5%;
+	float: left;
+	height: 100%;
+	position: relative;
+}
+
+#navList li a, 
+#navList li button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#navList li a {
+	text-decoration: none;
+	color: gray;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	transition: all .4s;
+}
+
+#navList li a:hover {
+	color: lightgray;
+}
+
+#controlsPanel {
+	width: 15%;
+	height: calc(100% - 50px);
+	position: absolute;
+	left: 0;
+	background-color: #3c3b3b;
+}
+
+#controlsList {
+	width: 100%;
+	list-style-type: none;
+	padding-left: 0;
+	margin-top: 50px;
+}
+
+#controlsList li {
+	width: 100%;
+	margin: 0;
+	margin-bottom: 10px;
+	float: left;
+	padding-left: 40px;
+	height: 50px;
+	position: relative;
+}
+
+#controlsList li:hover {
+	background-color: #2e6da4;
+}
+
+#controlsList li a {
+	color: lightgrey;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	text-decoration: none;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#controlsList li a i {
+	margin-right: 15px;
+	font-size: 1.6em;
+}
+
+#content{
+	width: 85%;
+	height: calc(100% - 50px);
+	position: absolute;
+	right: 0;
+	overflow: auto;
+}
+
+/*********************************
+		DASHBOARD VIEW
+**********************************/
+
+#usersChart {
+	width: 70%;
+	height: 700px;
+}
+
+#adminInfo {
+	width: 100%;
+	float: left;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.info {
+	width: 30.33%;
+	height: 200px;
+	float: left;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+	position: relative;
+}
+
+.icon-wrapper,
+.number-wrapper {
+	float: left;
+}
+
+.icon-wrapper {
+	width: 40%;
+	position: relative;
+	height: 90%;
+}
+
+.icon-wrapper i {
+	color: white;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 8em;
+}
+
+.number-wrapper {
+	width: 60%;
+	position: relative;
+}
+
+.bottom-bar {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+}
+
+.number {
+	color: white;
+	font-size: 3em;
+	position: absolute;
+  	top: 30px;
+  	right: 40px;
+  	font-size: 'Quicksand', sans-serif;
+}
+
+.info-title {
+	color: white;
+	font-size: 2em;
+	position: absolute;
+	top: 90px;
+	right: 40px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.traffic-info {
+	background-color: #0cb70c;
+}
+
+.traffic-info .bottom-bar {
+	background-color: #07a007;
+}
+
+.products-info {
+	background-color: #ffd100;
+}
+
+.products-info .bottom-bar {
+	background-color: #dcb500;
+}
+
+.admins-info {
+	background-color: #2e6da4;
+	margin-bottom: 30px;
+}
+
+.admins-info .bottom-bar {
+	background-color: #1f5584;
+}
+
+#canvasWrapper {
+	width: 95%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+
+#deleteButton {
+	width: 10%;
+	height: 35px;
+	background-color: #c5024d;
+	border: none;
+	color: white;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	transition: .4s;
+	margin-left: 40px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#deleteButton:hover {
+	background-color: #a0033f;
+}
+
+.view-title {
+	font-family: 'Open Sans', sans-serif;
+	padding-left: 60px;
+	padding-top: 40px;
+	font-size: 3em;
+	color: #2e6da4;
+}
+
+/*********************************
+		ADD PRODUCTS VIEW
+**********************************/
+
+.form-wrapper {
+	width: 50%;
+	float: left;
+}
+
+.subtitle {
+	font-size: 2em;
+	font-family: 'Open Sans', sans-serif;
+	padding-left: 60px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+form {
+	width: 100%;
+}
+
+.input-label-wrapper {
+	padding-left: 60px;
+	padding-bottom: 50px;
+}
+
+.input-label-wrapper label {
+	float: left;
+}
+
+.input-label-wrapper input {
+	width: 80%;
+	height: 40px;
+	margin-right: 20%;
+	float: left;
+	margin-bottom: 30px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	padding-left: 50px;
+}
+
+.input-label-wrapper textarea {
+	width: 80%;
+	height: 300px;
+	float: left;
+	margin-right: 20%;
+	padding-left: 30px;
+	padding-top: 30px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+}
+
+input[type="file"] {
+	font-family: 'Open Sans', sans-serif;
+	width: auto;
+	padding-left: 0;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+	border: none;
+	width: 200px;
+	height: 50px;
+	color: white;
+	background-color: #2e6da4;
+	cursor: pointer;
+	font-family: 'Open Sans', sans-serif;
+	padding-bottom: 10px;
+	margin-right: auto;
+	transition: .4s;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+	background-color: #18568c;
+
+}
+
+
+.submitProductDescription {
+	width: 50%;
+	height: 50px;
+	background-color: #2e6da4;
+	border: none;
+	color: white;
+	margin-top: 20px;
+	transition: .4s;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	float: left;
+}
+
+.submitProductDescription:hover {
+	background-color: #18568c;
+}
+
+
+#specsForm {
+	padding-top: 20px;
+}
+
+#specsForm input {
+	width: 35%;
+	margin-right: 2%;
+	padding-left: 20px;
+}
+
+.deleteInput {
+	width: 20%;
+	margin-right: 6%;
+	height: 40px;
+	background-color: #c5024d;
+	border: none;
+	color: white;
+	transition: .4s;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.specsTitle {
+	width: 50%;
+	float: left;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.8em;
+	margin-bottom: 50px;
+	padding-left: 60px;
+}
+
+.inputBtn {
+	width: 32%;
+	height: 40px;
+	border: none;
+	color: white;
+	background-color: #21ab18;
+	margin-left: 60px;
+	transition: .4s;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	margin-bottom: 30px;
+}
+
+#addInputBtn:hover {
+	background-color: #31862b;
+}
+
+#submitSpecsForm {
+	background-color: #2e6da4;
+}
+
+#submitSpecsForm:hover {
+	background-color: #18568c;
+}
+
+
+#productCodeInputWrapper input{
+	text-align: center;
+}
+
+/*********************************
+		ADMINS VIEW
+**********************************/
+
+
+
+.table-container {
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 50px;
+}
+
+.table-container button {
+	margin-left: 35%;
+	text-align: center;
+}
+
+.full-width {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	position: relative;
+}
+
+.full-width .input-label-wrapper {
+	width: 50%;
+	float: left;
+	padding-bottom: 20px;
+}
+
+.warning-div {
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 0 20px 0 20px;
+	background-color: rgba(204,0,0, .4);
+}
+
+.warning-div h3 {
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	margin-top: 10px;
+}
+
+.btn {
+	border-radius: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#logoutBtn {
+	border: none;
+	background: rgba(0,0,0,0);
+	font-family: 'Open Sans', sans-serif;
+	color: gray;
+	font-size: 1.2em;
+	transition: all .4s;
+	outline: none;
+}
+
+#logoutBtn:hover {
+	color: lightgray;
+}
+
+
+@media only screen and (max-width: 1500px) {
+	.info-title {
+		font-size: 1.8em;
+	}
+
+	#navList {
+		width: 20%;
+	}
+}
+
+@media only screen and (max-width: 1600px) {
+	#controlsList li {
+		padding-left: 15px;
+	}
+}
+
+
+@media only screen and (max-width: 1370px) {
+	.info-title {
+		font-size: 1.6em;
+	}
+
+	#navList {
+		width: 28%;
+	}
+
+	#controlsPanel {
+		width: 20%;
+	}
+
+	#content {
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 1250px) {
+
+	.info {
+		width: 32.33%;
+		margin-right: 0.5%;
+		margin-left: 0.5%;
+	}
+
+	.info-title {
+		font-size: 1.5em;
+		position: absolute;
+		right: 10px;
+	}
+
+	.number {
+		position: absolute;
+		right: 10px;
+	}
+}
+

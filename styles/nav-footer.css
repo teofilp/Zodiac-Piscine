@@ -1,0 +1,710 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	width: 100%;
+	height: 90px;
+	border-bottom: 3px solid rgb(46, 109, 164);
+	box-shadow: 0px 1px 15px 1px black;
+	z-index: 10;
+	position: relative;
+}
+
+p {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+}
+
+h1 {
+	font-weight: lighter;
+	font-size: 2em;
+	margin-top: 20px;
+}
+
+.centered-title {
+	text-align: center;
+	color: rgb(46, 109, 164);
+	font-family: "Huge", sans-serif;
+	font-size: 4.5em;
+	font-weight: bolder;
+	margin-bottom: 0;
+}
+
+#afterNav {
+	width: 100%;
+	height: 50px;
+	background-color:  rgb(46, 109, 164);;
+	position: relative;
+	z-index: 10;
+}
+
+.fixed-top {
+	position: fixed;
+	top: 0;
+	background-color: white;
+}
+
+#websiteBrand {
+	padding-top: 15px; 
+	margin-top: 0;
+	margin-left: 250px;
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	display: inline-block;
+}
+
+#websiteBrand a {
+	color: white;
+	text-decoration: none;
+	transition: all .3s;
+}
+
+#websiteBrand a:hover {
+	color: rgb(24, 73, 115);
+}
+
+#mediaLinks {
+	width: 30%;
+	height: 100%;
+	float: right;
+	margin-right: 250px;
+}
+
+.media-link	{
+	border-radius: 100%;
+	width: 33.33%;
+	height: 100%;
+	color: white;
+	float: left;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	padding-top: 5px;
+	font-size: 30px;
+	transition: .3s;
+}
+
+.media-link:hover {
+	cursor: pointer;
+}
+
+.fb:hover {
+	color: #3b5998;
+}
+
+.twt:hover {
+	color: #1dcaff;
+}
+
+.google:hover {
+	color: #dc143c;
+}
+
+#logo {
+	width: 120px;
+	height: 60px;
+	margin-top: 15px;
+	background-image: url("../images/logo.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	float: left;
+	margin-left: 250px;
+}
+
+#formWrapper {
+	float: left;
+	margin: 25px 0 0 30px;
+	height: 40px;
+	width: 25%;
+}
+
+#searchForm {
+	height: 100%;
+
+}
+
+.ion-ios-search-strong {
+	font-size: 30px;
+}
+
+#searchInput {
+	outline: none;
+	width: 85%;
+	height: 100%;
+	float: left;
+	border: 1px solid lightgrey;
+	border-right: none;
+	padding-left: 20px;
+	font-family: 'Open Sans', sans-serif;
+	font: 17px;
+}
+
+#search {
+	outline: none;
+	width: 15%;
+	height: 100%;
+	float: left;
+	background-color: rgb(46, 109, 164);
+	color: white;
+	padding: 0;
+	border: 1px solid rgb(46, 109, 164);
+	border-left: none;
+	transition: all .4s;
+}	
+
+#search:hover {
+	background-color: rgb(24, 73, 115);
+	border-color: rgb(24, 73, 115);
+}
+
+#navigationList {
+	list-style-type: none;
+	float: right;
+	width: 30%;
+	height: 100%;
+	padding: 0;
+	margin-bottom: 0;
+	margin-right: 250px;
+}
+
+.navigation-list-item {
+	width: 33.33%;
+	height: calc(100% - 35px);
+	float: left;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	margin-top: 32px;
+	border-top: 3px solid transparent;
+	z-index: 9;
+}
+
+.navigation-list-item  a {
+	color: grey;
+	text-decoration: none;
+	height: 100%;
+}
+
+.active {
+	color: #24aad6;
+}
+
+.navigation-list-item a:hover {
+	color: rgb(46, 109, 164);
+}
+
+.navigation-list-item a:hover .navigation-list-item {
+	color
+}
+
+#productsListDropdown {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 27px;
+	margin-left: -25px;
+	background-color: white;
+	width: 250px;
+	box-shadow: 4px 5px 25px 0px black;
+	display: none;
+	position: relative;
+	z-index: 9999;
+}
+
+#productsListDropdown li {
+	height: 40px;
+	text-align: center;
+	padding-top: 5px;
+}
+
+#productsListDropdown li:hover {
+	background-color: rgb(46, 109, 164);
+}
+
+#productsListDropdown li:hover .dropdown-link {
+	color: white;
+}
+
+.clearfix {
+	content: "";
+	width: 1px;
+	clear: both;
+}
+
+footer {
+	width: 100%;
+	height: 600px;
+	background-color: rgb(37, 37, 37);
+	position: relative;
+	font-weight: normal;
+}
+
+
+
+footer h1 {
+	font-size: 2em;
+}
+
+#locationsContainer {
+	width: 100%;
+	position: relative;
+}
+
+#map-cj {
+	width: 100%;
+	height: 300px;
+}
+
+#socialMediaFooter {
+	position: absolute;
+	top: 100px;
+	list-style-type: none;
+	width: 60%;
+	height: 100px;
+	margin-left: 20%;
+	margin-right: 20%;
+	padding-left: 0;
+	background: red;
+}
+
+div.media-links-div{
+	height: 75px;
+	width: 50%;
+	margin-left: 25%;
+	position: absolute;
+	top: 70px;
+}
+
+div.media-link-logo{
+	position: relative;
+	height: 50px;
+	width: 50px;
+	background-color: #fff;
+	margin-top: 4px;
+	margin-right: 7.5%;
+	margin-left: 7.5%;
+	top: 50%;
+	border-radius: 50%;
+	transition: background-color .3s;
+	float: left;
+}
+
+ .media-link-logo i{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 25px;
+	transition: color .3s;
+}
+
+i.fb-i{
+	color: #3b5999;
+}
+
+i.tw-i{
+	color: #55acee;
+}
+
+i.gp-i{
+	color: #dd4b39;
+}
+
+i.pi-i{
+	color: #bd081c;
+}
+
+i.ln-i{
+	color: #0077B5;
+}
+
+div.fb-logo{
+	border: 2px solid #3b5999;
+}
+
+div.tw-logo{
+	border: 2px solid #55acee;
+}
+
+div.gp-logo{
+	border: 2px solid #dd4b39;
+}
+
+div.pi-logo{
+	border: 2px solid #bd081c;
+}
+
+div.ln-logo{
+	border: 2px solid #0077B5;
+}
+
+div.ln-logo:hover{
+	background-color: #0077B5;
+}
+
+div.ln-logo:hover i.ln-i{
+	color: #fff;
+}
+
+div.gp-logo:hover{
+	background-color: #dd4b39;
+}
+
+div.gp-logo:hover i.gp-i{
+	color: #fff;
+}
+
+div.tw-logo:hover{
+	background-color: #55acee;
+}
+
+div.pi-logo:hover{
+	background-color: #bd081c;
+}
+
+div.pi-logo:hover i.pi-i{
+	color: #fff;
+}
+
+div.tw-logo:hover i.tw-i{
+	color: #fff;
+}
+
+div.fb-logo:hover{
+	background-color: #3b5999;
+}
+
+div.fb-logo:hover i.fb-i{
+	color: #fff;
+}
+
+#allRightsReserved {
+	width: 100%;
+	height: 80px;	
+	background-color: rgb(32, 29, 28);
+	position: absolute;
+	bottom: 0;
+}
+
+#allRightsReserved p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.5em;
+	color: gray;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	top: 25px;
+}
+
+#moreInfo {
+	width: 40%;
+	float: left;
+}
+
+.footer-section-title {
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2em;
+	padding-top: 30px;
+	margin-left: 80px;
+	margin-bottom: 50px;
+}
+
+#moreInfoParagraph, #byPerson {
+	margin-left: 80px;
+	color: gray;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 35px;
+}
+
+#byPerson {
+	text-align: right;
+}
+
+#listsContainer {
+	width: 30%;
+	float: left;
+	padding-left: 20px;
+}
+
+#mediaList {
+	width: 100%;
+	float: left;
+	padding: 0;
+	padding-left: 50px;
+	list-style-type: none;
+	margin: 0;
+}
+
+#mediaList li {
+	width: 100%;
+	float: left;
+	margin-bottom: 15px;
+}
+
+#mediaList li i {
+	display: inline-block;
+}
+
+#mediaList li p {
+	color: gray;
+	font-family: 'Open Sans', sans-serif;
+	display: inline-block;
+	padding-top: 15px;
+	font-size: 1em;
+}
+
+#contactList {
+	width: 100%;
+
+}
+
+#contactListContainer {
+	width: 30%;
+	float: left;
+}
+
+#contactListContainer li {
+	width: 70%;
+	margin-right: 30%;
+	float: left;
+	margin-bottom: 15px;
+	display: inline-block;
+	padding-right: 80px; 
+	position: relative;
+}
+
+#contactListContainer li i {
+	font-size: 40px;
+	color: white;
+}
+
+#contactList li p {
+	color: gray;
+	font-family: 'Open Sans', sans-serif;
+	text-align: right;
+	font-size: 1em;
+	padding-left: 50px;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	padding-top: 15px;
+}
+
+
+@media only screen and (max-width: 1500px) {
+
+	#navigationList {
+		margin-right: 100px;
+	}
+}
+
+@media only screen and (max-width: 1400px) {
+
+	div.produs-div {
+		width: 28.33%;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+	}
+
+	#mediaLinks {
+		margin-right: 100px;
+	}
+
+	#logo {
+		margin-left: 100px;
+	}
+
+	#websiteBrand {
+		margin-left: 100px;
+	}
+}
+
+#dropDownMenuButton {
+	width: 75px;
+	height: 75px;
+	margin: 0;
+	cursor: pointer;
+	display: none;
+	position: absolute;
+	bottom: 20px;
+	right: 100px;
+}
+
+#dropDownMenuButton i {
+	color: rgb(46, 109, 164);
+	font-size: 5em;
+}
+
+#dropDownMenu {
+	width: 100%;
+	height: 300px;
+	position: absolute;
+	top: 90px;
+	z-index: 9;
+	display: none;
+}
+
+#dropDownMenuList {
+	list-style-type: none;
+	padding: 0;
+	width: 100%;  
+	margin-bottom: 0;
+}
+
+#dropDownMenuList li {
+	width: 100%;
+	height: 150px;
+	background-color: white;
+	float: left;
+	text-align: center;
+	border-bottom: 2px solid rgb(43, 109, 164);
+	position: relative;
+}
+
+#dropDownMenuList li a {
+	text-decoration: none;
+	color: rgb(46, 109. 164);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2.3em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all .4s;
+}
+
+#dropDownMenuList li:hover {
+	background-color: rgb(46, 109, 164);
+}
+
+.dpListItem:hover a {
+	color: white;
+}
+
+
+@media only screen and (max-width: 1350px) {
+
+	#sectionImageTitle {
+		display: none;
+	}
+
+	#aboutTextContainer {
+		width: 80%; 
+		margin-left: 10%;
+	}
+}
+
+@media only screen and (max-width: 1250px) {
+
+	#navigationList {
+		display: none;
+	}
+
+	#dropDownMenuButton {
+		display: inline-block;
+		padding-bottom: 20px;
+	}
+
+
+	#moreInfo {
+		width: 60%;
+		margin-left: 20%;
+		margin-right: 20%;
+		float: right;
+	}
+
+	#contactListContainer {
+		float: right;
+		margin-right: 15%;
+	}
+
+	#listsContainer {
+		margin-left: 15%;
+	}
+
+	#contactListContainer li {
+		width: 90%;
+		margin-right: 10%;
+	}
+
+	footer {
+		height: 900px;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+
+	#listsContainer {
+		width: 40%;
+		margin-left: 10%;
+	}
+
+	#contactListContainer {
+		width: 40%;
+		margin-right: 10%;
+	}
+
+	#contactList li {
+		padding-left: 40px;
+	}
+
+	div.produs-div {
+		width: 32.33%;
+		margin-left: .5%;
+		margin-right: .5%;
+	}
+
+	#moreInfo h1 {
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 920px) {
+	footer {
+		height: 1100px;
+	}
+
+	#formWrapper {
+		width: 35%;
+	}
+}
+
+@media only screen and (max-width: 860px) {
+	#moreInfo {
+		display: none;
+	}
+
+	#contactListContainer, #listsContainer {
+		width: 50%;
+		margin: 0;
+	}
+
+	footer {
+		height: 600px;
+	}
+
+	#dropDownMenuButton {
+		position: absolute;
+		bottom: 20px;
+		right: 50px;
+	}
+
+	#logo {
+		margin-left: 50px;
+	}
+
+	#mediaLinks {
+		margin-right: 50px;
+	}
+
+	#websiteBrand {
+		margin-left: 50px;
+	}
+}
